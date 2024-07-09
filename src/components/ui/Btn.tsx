@@ -10,7 +10,7 @@ export const Btn: React.FC<Props> = forwardRef<HTMLButtonElement, Props>(({ clas
         ref={ref}
         {...props}
         className={cn(
-            `flex items-center justify-center w-full sm:w-fit sm:min-w-32 lg:min-w-36 h-10 lg:h-11 font-media px-4 rounded text-[#fff] bg-black transition-opacity duration-300 hover:opacity-80 ${className}`,
+            `flex items-center justify-center w-full h-12 lg:h-12 font-medium px-5 rounded-full text-white bg-darkGray transition-opacity duration-300 hover:opacity-80 ${className}`,
             {
                 'pointer-events-none bg-slate-300': props.disabled,
             }
