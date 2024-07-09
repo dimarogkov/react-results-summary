@@ -1,9 +1,32 @@
 import { useResultsSummary } from '../../../store/resultsSummary';
-import { Btn, Subtitle } from '../../ui';
+import { getRandomPoints } from '../../../helpers/getRandomPoints';
+import { getTotalPoints } from '../../../helpers/getTotalPoints';
+import { SummaryItem as SummaryItemType } from '../../../types/resultsSummary';
+
 import { SummaryItem } from '../SummaryItem';
+import { Btn, Subtitle } from '../../ui';
+import { getResult } from '../../../helpers/getResult';
 
 export const CardSummary = () => {
-    const summaryItems = useResultsSummary((state) => state.summaryItems);
+    const { summaryItems, updateSummaryItems, updateResult } = useResultsSummary((state) => state);
+
+    const createResult = (items: SummaryItemType[]) => {
+        const totalPoints = getTotalPoints(items);
+        const newResult = getResult(totalPoints);
+
+        updateResult(newResult);
+    };
+
+    const changeSummary = () => {
+        const newItems = [...summaryItems].map((summaryItem) => {
+            const newPoints = getRandomPoints();
+
+            return { ...summaryItem, summaryPoints: newPoints };
+        });
+
+        updateSummaryItems(newItems);
+        createResult(newItems);
+    };
 
     return (
         <div className='w-full sm:w-[50%] p-5 md:p-8'>
@@ -15,7 +38,7 @@ export const CardSummary = () => {
                 ))}
             </div>
 
-            <Btn>Change</Btn>
+            <Btn onClick={changeSummary}>Change</Btn>
         </div>
     );
 };
