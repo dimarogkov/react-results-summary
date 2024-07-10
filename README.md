@@ -1,11 +1,11 @@
-# React Template
+# React Results Summary Card
 
-This is **React Template** for development. Technolgies used: **React, TypeScript, Redux Toolkit, Tailwind CSS.**
+[Project Demo](https://dimarogkov.github.io/react-results-summary)
 
 ## Installation Steps
 
 -   Download the repository
--   Use the 18th version of Node.js
+-   Use the 18th version of Node.jss
 -   Run `npm i`
 -   Run `npm run start`
 
@@ -15,8 +15,7 @@ This is **React Template** for development. Technolgies used: **React, TypeScrip
     -   elements
     -   pages
     -   ui
+-   data
 -   helpers
 -   store
 -   types
-    -   enums
-    -   interfaces

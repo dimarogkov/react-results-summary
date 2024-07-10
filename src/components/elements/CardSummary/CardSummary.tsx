@@ -38,7 +38,7 @@ export const CardSummary = () => {
                 ))}
             </div>
 
-            <Btn onClick={changeSummary}>Change</Btn>
+            <Btn onClick={changeSummary}>Change Summary</Btn>
         </div>
     );
 };
