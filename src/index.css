@@ -6,7 +6,6 @@
 
 html {
     height: 100%;
-    background-color: #fff;
 }
 
 body {
@@ -20,6 +19,10 @@ body {
 }
 
 @media (max-width: 639px) {
+    html {
+        height: auto;
+    }
+
     body {
         display: block;
     }
