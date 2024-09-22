@@ -8,7 +8,7 @@ export const CardResult = () => {
     return (
         <div
             className={cn(
-                'relative w-full sm:w-[50%] text-center text-white/75 p-8 rounded-b-2xl sm:rounded-2xl bg-gradient-to-t',
+                'relative w-full sm:w-[50%] text-center text-white/75 p-8 rounded-xl sm:rounded-2xl bg-gradient-to-t',
                 {
                     'from-gray-500 to-slate-300': totalPoints >= 1 && totalPoints < 25,
                     'from-orange-600 to-amber-500': totalPoints >= 25 && totalPoints < 50,
